@@ -19,7 +19,7 @@ let middleY = height / 2;
 fill("green");
 circle(middleX, middleY, 50);
 
-donut(middleX, middleY, radius, 20)
+donut(middleX, middleY, radius, 20);
 }
 
 function donut(middleX, middleY, r, n) {

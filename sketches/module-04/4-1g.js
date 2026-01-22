@@ -10,7 +10,7 @@ for (let i = 0; i < 50000; i++) {
     if (x < y) {
         fill(0, 70, 100);
     } else if (x > y + 200) {
-        fill(90, 70, 100)
+        fill(90, 70, 100);
     }
     else {
         fill(0, 0, 10);
