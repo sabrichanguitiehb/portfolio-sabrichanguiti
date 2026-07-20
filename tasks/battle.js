@@ -1,4 +1,3 @@
-let size = 50;
 let h = 0;
 let sizeDiff = 1;
 let particles = [];
