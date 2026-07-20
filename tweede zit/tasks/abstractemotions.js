@@ -1,3 +1,4 @@
+let amount = 20 + floor(random(0, 6));
 let choose = random() < 0.5;
 let radius;
 
@@ -10,12 +11,8 @@ noStroke;
 let base = min(width, height);
 let r1 = base * 0.1;
 let r2 = base * 0.3;
-if (choose){
-    radius = r1;
-}
-    else{
-        radius = r2;
-    }
+radius = choose ? r2 : r1;
+
 let middleX = width / 2;
 let middleY = height / 2;
 
