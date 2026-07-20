@@ -3,13 +3,15 @@ let sizeDiff = 1;
 let particles = [];
 let verraden = false;
 let trustDistance = 100;
+let particlesCount = 50;
+
 function setup() {
     createCanvas(windowWidth, windowHeight);
     colorMode(HSB, 360, 100, 100);
     rectMode(CENTER);
     noStroke();
 
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < particlesCount; i++) {
         particles.push({
             x: random(width),
             y: random(height),
