@@ -23,7 +23,7 @@ donut(middleX, middleY, radius, 20);
 }
 
 function donut(middleX, middleY, r, n) {
-
+    fill("purple");
     for (let i = 0; i < n; i++) {
         let a = map(i, 0, n, 0, TWO_PI);
         a += random(-0.03, 0.03);
@@ -31,7 +31,7 @@ function donut(middleX, middleY, r, n) {
         let x = middleX + cos(a) * r;
         let y = middleY + sin(a) * r;
 
-        fill("purple");
+        
         circle(x, y, 50);
     }
 }
