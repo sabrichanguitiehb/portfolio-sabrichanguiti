@@ -1,7 +1,6 @@
 let size = 50;
 let h = 0;
 let sizeDiff = 1;
-let shape = true;
 let particles = [];
 let verraden = false;
 let trustDistance = 100;
@@ -79,8 +78,7 @@ function k2(hue) {
 
 function receivedOSC(address, args) {
     let values = oscArgsToArray(args);
-    //receives OSC messages for different addresses
-    //the pads are buttons, the k's are knobs
+    
     switch (address) {
         case "/pad1":
             pad1();
