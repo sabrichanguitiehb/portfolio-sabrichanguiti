@@ -1,17 +1,17 @@
-let size = 50;
 let h = 0;
 let sizeDiff = 1;
-let shape = true;
 let particles = [];
 let verraden = false;
 let trustDistance = 100;
+let particlesCount = 50;
+
 function setup() {
     createCanvas(windowWidth, windowHeight);
     colorMode(HSB, 360, 100, 100);
     rectMode(CENTER);
     noStroke();
 
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < particlesCount; i++) {
         particles.push({
             x: random(width),
             y: random(height),
@@ -79,8 +79,7 @@ function k2(hue) {
 
 function receivedOSC(address, args) {
     let values = oscArgsToArray(args);
-    //receives OSC messages for different addresses
-    //the pads are buttons, the k's are knobs
+    
     switch (address) {
         case "/pad1":
             pad1();

@@ -1,4 +1,3 @@
-let amount = 20 + floor(random(0, 6));
 let choose = random() < 0.5;
 let radius;
 
@@ -11,15 +10,21 @@ noStroke;
 let base = min(width, height);
 let r1 = base * 0.1;
 let r2 = base * 0.3;
-radius = choose ? r2 : r1;
+
+if (choose){
+    radius = r1;
+}
+    else{
+        radius = r2;
+}
 
 let middleX = width / 2;
 let middleY = height / 2;
 
 fill("green");
 circle(middleX, middleY, 50);
-
 donut(middleX, middleY, radius, 20);
+
 }
 
 function donut(middleX, middleY, r, n) {
@@ -30,7 +35,6 @@ function donut(middleX, middleY, r, n) {
 
         let x = middleX + cos(a) * r;
         let y = middleY + sin(a) * r;
-
         
         circle(x, y, 50);
     }
